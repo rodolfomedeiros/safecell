@@ -1,0 +1,39 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<div class="row">
+  <div class="mx-auto d-block col-xl-3 col-md-6 col-sm-6 col-10">
+    <div class="bg-light rounded col-12 mt-5">
+      <div class="col-12">
+        <img src="./../../../assets/default.png" class="img-fluid mx-auto d-block col-6">
+      </div>
+      <div class="col-12 mt-3">
+        <h3 class="text-center text-info">SafeCell</h3>
+      </div>
+      <div class="mt-5">
+        <form class="form-group" (ngSubmit)="onLogin()" [formGroup]="form">
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="pi pi-user"></i></div>
+            </div>
+            <input formControlName="email" type="email" class="form-control" autofocus="autofocus" placeholder="Email">
+          </div>
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="pi pi-lock"></i></div>
+            </div>
+            <input formControlName="senha" type="password" class="form-control" placeholder="Senha">
+          </div>
+          <div class="row col-12">
+            <div class="col-8 mx-auto">
+              <button type="submit" class="btn btn-info m-3 col-12">Entrar</button>
+            </div>
+          </div>
+          <div class="row col-12">
+            <div class="mx-auto">
+              <button routerLink="/free/cadastrar" type="button" class="btn btn-link m-3 col-12">Não possui uma Conta?</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

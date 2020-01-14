@@ -1,0 +1,51 @@
+<section class="header">
+  <nav class="navbar navbar-expand navbar-light bg-info">
+    <button routerActive="active" class="btn btn-outline-warning border-0" routerLink="/home/ocorrencia/home" tooltip="Home"
+      placement="bottom">
+      <img style="width: 30px; height: 30px;" src="./../../assets/default.png">
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <div class="btn-group" dropdown>
+            <button routerActive="active" dropdownToggle class="btn btn-outline-warning border-0 dropdown-toggle">
+              Perfil <span class="caret"></span>
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li><a routerLink='/home/conta/editar' class="dropdown-item">Editar Perfil</a></li>
+              <li *ngIf="authService.isAdmin()"><a routerLink='/home/conta/new' class="dropdown-item">Cadastrar Novo Agente</a></li>
+              <!-- <li *ngIf="authService.isAdmin()"><a routerLink='/home/conta/view' class="dropdown-item">Listar</a></li> -->
+              <!--li class="divider dropdown-divider"></li-->
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="btn-group" dropdown>
+            <button routerActive="active" dropdownToggle class="btn btn-outline-warning border-0 dropdown-toggle">
+              Ocorrência <span class="caret"></span>
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <div>
+                <li><a routerLink='/home/ocorrencia/cadastrar' class="dropdown-item">Cadastrar</a></li>
+                <li><a routerLink='/home/ocorrencia/buscar' class="dropdown-item">Buscar</a></li>
+                <li class="divider dropdown-divider"></li>
+              </div>
+              <!--<li><a routerLink='/home/ponto/listar' class="dropdown-item">Relatório</a></li>-->
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <button (click)="authService.logout()" class="btn btn-outline-warning btn-sm">
+        <i class="fas fa-sign-out-alt">
+      </i></button>
+    </div>
+  </nav>
+</section>
+
+<section class="body container">
+  <router-outlet></router-outlet>
+</section>
+
+<section class="footer">
+</section>
+

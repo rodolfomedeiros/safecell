@@ -1,0 +1,12 @@
+<div class="card mt-2">
+  <div class="card-header bg-light">
+    <h5 class="card-title">Armas utilizadas</h5>
+  </div>
+  <div class="card-body">
+    <div class="chart">
+      <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+        [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+      </canvas>
+    </div>
+  </div>
+</div>

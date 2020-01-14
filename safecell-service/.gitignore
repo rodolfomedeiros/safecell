@@ -1,0 +1,11 @@
+
+# FILES
+
+.classpath
+.project
+
+# FOLDERS
+
+/target
+.settings/
+.vscode

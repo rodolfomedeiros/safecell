@@ -1,0 +1,36 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title text-center d-none d-print-block">Contas Cadastradas no Ponto Eletrônico</h4>
+    <h5 class="d-none d-print-block">Busca </h5>
+    <input #filter (keyup)='onFilter(filter.value)' type="text" class="form-control col-6" placeholder="Filtrar nome, email, funcao ou jornada semanal">
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Função</th>
+            <th scope="col">Jornada Semanal</th>
+            <th class="d-print-none" scope="col-3">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <!--th scope="row">{{ user.id }}</th-->
+            <td>{{ user.nome }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.funcao }}</td>
+            <td>{{ user.horasTrabalho }}</td>
+            <td class="d-print-none">
+              <button tooltip="Editar" placement="bottom" (click)="edit(user.id)" class="btn btn-outline-info btn-sm"><i class="pi pi-pencil"></i></button>
+              <button tooltip="Excluir" placement="bottom" (click)="delete(user.id)" class="btn btn-outline-danger btn-sm"><i class="pi pi-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

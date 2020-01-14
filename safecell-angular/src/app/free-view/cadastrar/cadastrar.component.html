@@ -1,0 +1,82 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<div class="container">
+  <div class="row">
+    <div class="mx-auto col-12 card">
+      <div class="card-header bg-info">
+        <h4 class="card-title text-light">
+          Deseja cadastrar um novo usuário?
+        </h4>
+      </div>
+      <div class="card-body">
+        <form class="form-group" (ngSubmit)='save()' [formGroup]="form">
+          <div class="form-row">
+            <div class="form-group col-12">
+              <label>Nome</label>
+              <input formControlName="nome" type="text" class="form-control" placeholder="Nome" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-12">
+              <label>Email</label>
+              <input formControlName="email" type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group col-6">
+              <label>Senha</label>
+              <input formControlName="senha" type="password" class="form-control" placeholder="Senha" required>
+            </div>
+            <div class="form-group col-6">
+              <label>Confirme</label>
+              <input formControlName="confirmPassword" type="password" class="form-control"
+                placeholder="Confirme a senha" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <label>CPF</label>
+              <input formControlName="cpf" type="text" class="form-control" placeholder="CPF" required>
+            </div>
+            <div class="form-group col-6">
+              <label>Telefone</label>
+              <input formControlName="telefone" type="text" class="form-control" placeholder="Telefone" required>
+            </div>
+            <div class="form-group col-6">
+              <label>Nascimento</label>
+              <input formControlName="nascimento" type="text" class="form-control" placeholder="dia/mes/ano" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-12">
+              <label>Rua</label>
+              <input formControlName="rua" type="text" class="form-control" placeholder="Rua" required>
+            </div>
+            <div class="form-group col-6">
+              <label>Numero da Casa</label>
+              <input formControlName="numero" type="text" class="form-control" placeholder="Numero" required>
+            </div>
+            <div class="form-group col-6">
+              <label>Complemento</label>
+              <input formControlName="complemento" type="text" class="form-control" placeholder="Complemento">
+            </div>
+            <div class="form-group col-6">
+              <label>Bairro</label>
+              <input formControlName="bairro" type="text" class="form-control" placeholder="Bairro" required>
+            </div>
+            <div class="form-group col-6">
+              <label>Cidade</label>
+              <input formControlName="cidade" type="text" class="form-control" placeholder="Cidade" required>
+            </div>
+            <div class="form-group col-6">
+              <label>Estado</label>
+              <input formControlName="estado" type="text" class="form-control" placeholder="Estado" required>
+            </div>
+            <div class="form-group col-6">
+              <label>CEP</label>
+              <input formControlName="cep" type="text" class="form-control" placeholder="CEP" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-info">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<div class="card">
+  <!-- <div class="card-header">
+    <h5 class="text-center">Cadastro de Ocorrência</h5>
+  </div> -->
+  <div class="card-body">
+    <form class="form-group" (ngSubmit)='save()' [formGroup]="form">
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label>Número do BO</label>
+          <input formControlName="bo" type="text" class="form-control" placeholder="número do BO">
+        </div>
+        <div class="form-group col-6">
+          <label>IMEI 1</label>
+          <input formControlName="imei1" type="text" class="form-control" placeholder="imei1" required>
+        </div>
+        <div class="form-group col-6">
+          <label>IMEI 2</label>
+          <input formControlName="imei2" type="text" class="form-control" placeholder="imei2" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label>Quantidade de Indivíduos</label>
+          <input formControlName="quantIndividuos" type="number" class="form-control"
+            placeholder="quantidade de individuos" required>
+        </div>
+        <div class="form-group col-12">
+          <label>Veículo</label>
+          <select formControlName="tipoVeiculo" class="form-control">
+            <option value="" selected>Escolha o Veículo...</option>
+            <option value="1">Automóvel</option>
+            <option value="2">Motocicleta</option>
+            <option value="3">Bicicleta</option>
+            <option value="4">Sem Veículo</option>
+            <option value="5">Outro</option>
+          </select>
+        </div>
+        <div class="form-group col-12">
+          <label>Arma utilizada</label>
+          <select formControlName="tipoArma" class="form-control">
+            <option value="" selected>Escolha a Arma...</option>
+            <option value="1">Pistola</option>
+            <option value="2">Revolver</option>
+            <option value="3">Faca</option>
+            <option value="4">Cano Longo</option>
+            <option value="5">Sem Arma</option>
+            <option value="6">Outro</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label>Data</label>
+          <input bsDatepicker formControlName="data" class="form-control" placeholder="Clique Aqui"
+            [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY', containerClass: 'theme-green' }">
+        </div>
+        <div class="form-group">
+          <label>Horario do Ocorrido</label>
+          <timepicker formControlName="horario"></timepicker>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label>Rua</label>
+          <input formControlName="rua" type="text" class="form-control" placeholder="Rua" required>
+        </div>
+        <div class="form-group col-6">
+          <label>Numero da Casa</label>
+          <input formControlName="numero" type="text" class="form-control" placeholder="Numero" required>
+        </div>
+        <div class="form-group col-6">
+          <label>Complemento</label>
+          <input formControlName="complemento" type="text" class="form-control" placeholder="Complemento">
+        </div>
+        <div class="form-group col-6">
+          <label>Bairro</label>
+          <input formControlName="bairro" type="text" class="form-control" placeholder="Bairro" required>
+        </div>
+        <div class="form-group col-6">
+          <label>Cidade</label>
+          <input formControlName="cidade" type="text" class="form-control" placeholder="Cidade" required>
+        </div>
+        <div class="form-group col-6">
+          <label>Estado</label>
+          <input formControlName="estado" type="text" class="form-control" placeholder="Estado" required>
+        </div>
+        <div class="form-group col-6">
+          <label>CEP</label>
+          <input formControlName="cep" type="text" class="form-control" placeholder="CEP" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-info">Cadastrar</button>
+    </form>
+  </div>
+</div>

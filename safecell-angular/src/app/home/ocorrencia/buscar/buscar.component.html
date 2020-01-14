@@ -1,0 +1,29 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<div class="card mt-5">
+  <div class="card-header bg-transparent row">
+    <input #filter type="text" class="form-control col-9" placeholder="buscar por imei-1 ou imei-2">
+    <button class='btn btn-info btn-sm col-3' (click)="onSearch(filter.value)">Buscar</button>
+  </div>
+</div>
+
+<div class="card mt-1" *ngIf="this.occurrence != null">
+  <div class="card-body">
+    <div>
+      <button class="btn btn-sm btn-info text-center" [disabled]="this.occurrence.status" tooltip="Editar?" placement="top">
+        <span class="fas fa-edit"></span>
+      </button>
+      <button (click)="arquivar()" [disabled]="this.occurrence.status" class=" btn btn-sm btn-success text-center" tooltip="Arquivar?" placement="right"><span
+          class="fas fa-bell"></span>
+      </button>
+      <label *ngIf="this.occurrence.status">
+        <span class="fas fa-arrow-right"></span>
+         Ocorrência Solucionada!</label>
+    </div>
+    <div class="row">
+      <label class="col-12 text-center">Ocorrência nº: {{ this.occurrence.id }}</label>
+      <label class="col-6 text-center">IMEI 1: {{ this.occurrence.imei1 }}</label>
+      <label class="col-6 text-center">IMEI 2: {{ this.occurrence.imei2 }}</label>
+      <!--label class="col-6">Quantidade de Indivíduos: {{ this.occurrence.quantIndividuos }}</label-->
+    </div>
+  </div>
+</div>
