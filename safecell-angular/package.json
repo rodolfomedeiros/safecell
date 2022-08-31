@@ -29,7 +29,7 @@
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.25",
+    "moment-timezone": "^0.5.35",
     "ng2-charts": "^2.3.0",
     "ngx-bootstrap": "^4.2.0",
     "path": "^0.12.7",
